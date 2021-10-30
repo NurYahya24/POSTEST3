@@ -1,0 +1,33 @@
+#NAMA   : Nur Yahya
+#NIM    : 2109106073
+print("""
+
+DAPATKAN DISKON HINGGA 25% DAN PENAWARAN MENARIK LAINNYA
+                PADA HARI SENIN DAN JUM'AT
+            
+""")
+print("""gunakan kode voucher JUMATBERKAH, dan SENINBELANJA 
+untuk mendapatkan diskon hingga 25%
+""")
+
+total = int(input("Masukkan total belanja: Rp. "))
+print()
+kovo = str(input("Masukkan kode voucher: "))
+disc10 = total * 0.1
+disc25 = total * 0.25
+disc10r = total - disc10
+disc25r = total - disc25
+if kovo == 'JUMATBERKAH':
+   print("Diskon 25%")
+   print("Total Pembayaran :%d" %disc25r)
+elif kovo == 'SENINBELANJA' :
+    print("Diskon 10%")
+    print("Total Pembayaran :%d " %disc10r)
+import random
+import string
+
+kode = string.ascii_uppercase + string.digits
+koja = ''.join(random.choice(kode) for i in range(12))
+print("KODE PEMBAYARAN : ", koja)
+print("""Silahkan lakukan pembayaran di Indomerit terdekat 
+dengan menggunakan kode pembayaran""")
