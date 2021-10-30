@@ -19,10 +19,10 @@ disc10r = total - disc10
 disc25r = total - disc25
 if kovo == 'JUMATBERKAH':
    print("Diskon 25%")
-   print("Total Pembayaran :%d" %disc25r)
+   print("Total Pembayaran : Rp. %d" %disc25r)
 elif kovo == 'SENINBELANJA' :
     print("Diskon 10%")
-    print("Total Pembayaran :%d " %disc10r)
+    print("Total Pembayaran : Rp. %d " %disc10r)
 import random
 import string
 
