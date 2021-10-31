@@ -26,17 +26,17 @@ disc25 = total * 0.25
 disc10r = total - disc10
 disc25r = total - disc25
 while True:
-    kovo = str(input("Masukkan kode voucher: "))
+    kovo = str(input("Masukkan kode voucher : "))
     if kovo == 'JUMATBERKAH':
         print("DISKON 25%")
-        print("TOTAL PEMBAYARAN : Rp. %d"%disc25r)
+        print("TOTAL PEMBAYARAN        : Rp. %d"%disc25r)
         break
     elif kovo == 'SENINBELANJA':
         print("DISKON 10%")
-        print("TOTAL PEMBAYARAN : Rp. %d"%disc10r)
+        print("TOTAL PEMBAYARAN       : Rp. %d"%disc10r)
         break
     elif kovo == '-':
-         print("TOTAL PEMBAYARAN : Rp. %d"%total)
+         print("TOTAL PEMBAYARAN      : Rp. %d"%total)
          break
     else:
         print("Maaf, kode voucher tidak tersedia")
@@ -48,6 +48,6 @@ import string
 
 kode = string.ascii_uppercase + string.digits
 koja = ''.join(random.choice(kode) for i in range(12))
-print("KODE PEMBAYARAN : ACL"+koja)
+print("KODE PEMBAYARAN       : ACL"+koja)
 print("""Silahkan lakukan pembayaran di Indomerit terdekat 
 dengan menggunakan kode pembayaran""")
