@@ -9,25 +9,45 @@ DAPATKAN DISKON HINGGA 25% DAN PENAWARAN MENARIK LAINNYA
 print("""gunakan kode voucher JUMATBERKAH, dan SENINBELANJA 
 untuk mendapatkan diskon hingga 25%
 """)
+while True:
+    try:
+        total = int(input("Masukkan total belanja: Rp. "))
+        print()
+    except ValueError:
+        print("Maaf, Masukan harus berupa angka")
+        print()
+    else:
+        break
 
-total = int(input("Masukkan total belanja: Rp. "))
-print()
-kovo = str(input("Masukkan kode voucher: "))
+
+
 disc10 = total * 0.1
 disc25 = total * 0.25
 disc10r = total - disc10
 disc25r = total - disc25
-if kovo == 'JUMATBERKAH':
-   print("Diskon 25%")
-   print("Total Pembayaran : Rp. %d" %disc25r)
-elif kovo == 'SENINBELANJA' :
-    print("Diskon 10%")
-    print("Total Pembayaran : Rp. %d " %disc10r)
+while True:
+    kovo = str(input("Masukkan kode voucher: "))
+    if kovo == 'JUMATBERKAH':
+        print("DISKON 25%")
+        print("TOTAL PEMBAYARAN : Rp. %d"%disc25r)
+        break
+    elif kovo == 'SENINBELANJA':
+        print("DISKON 10%")
+        print("TOTAL PEMBAYARAN : Rp. %d"%disc10r)
+        break
+    elif kovo == '-':
+         print("TOTAL PEMBAYARAN : Rp. %d"%total)
+         break
+    else:
+        print("Maaf, kode voucher tidak tersedia")
+        print("apabila tidak ingin menggunakan voucher, masukkan '-'")
+        print()
+        continue
 import random
 import string
 
 kode = string.ascii_uppercase + string.digits
 koja = ''.join(random.choice(kode) for i in range(12))
-print("KODE PEMBAYARAN : ", koja)
+print("KODE PEMBAYARAN : ACL"+koja)
 print("""Silahkan lakukan pembayaran di Indomerit terdekat 
 dengan menggunakan kode pembayaran""")
